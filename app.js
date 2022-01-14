@@ -1,31 +1,21 @@
-// Function for computer to choose
-// ‘Rock’, ‘Paper’ or ‘Scissors’
+//Defining moves for computer 
+const select = ['rock', 'paper', 'scissors']
 
 
-let computerPlay =["Rock", "Paper", "Scissors"]
-let random = Math.floor(Math.random() * computerPlay.length);
-
-
-// player select
-
-//  const playerSelection = playerPlay()
-// const computerSelection= computerPlay()
-
-//prompt for player to enter only allowed names
-let playerChoose = prompt ("Rock, Paper, Scissors ?");
-if (playerChoose === 'Rock'){
-
-}
-else if (playerChoose === 'Paper'){
-
-}
-else if (playerChoose === 'Scissors'){
-
+//computer random selection from const select
+function computerPlay (){
+return select[Math.floor(Math.random()*select.length)]
 }
 
-    else {
-            alert ( 'Invalid selection')
-    }
-    
-     
+// defining computer and player selection, allowing playerSelection to be case insensitive 
+const computerSelection = computerPlay;
+const playerSelection= "rock"
 
+playerSelection = playerSelection.toLowerCase
+
+
+//function that plays a round and returns a string for the winner based on match
+function playRound (computerSelection, playerSelection );{
+
+
+}
