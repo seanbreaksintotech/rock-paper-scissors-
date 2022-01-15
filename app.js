@@ -6,15 +6,14 @@ const select = ['rock', 'paper', 'scissors']
 function computerPlay (){
 return select[Math.floor(Math.random()*select.length)]
 }
-// function playerPlay (){
-// let playerChoose = prompt ('Rock, Paper or Scissors?')
-    
+
 
 // }
 
 //function that plays a round and returns a string for the winner based on match
 function playRound (){
-const playerSelection = "rock"
+    //prompt that allows player input
+const playerSelection = prompt ('rock, paper, scissors?').toLowerCase();
 const computerSelection = computerPlay ();
 
 
@@ -40,7 +39,7 @@ else if ( computerSelection === "paper" && playerSelection === "scissors")
     return('you win, scissors beats paper!') 
 
   else {
-      return("error")
+      return("Invalid Enrty")
   }
 }
 
