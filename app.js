@@ -19,37 +19,48 @@ console.log(playRound(computerSelection, playerSelection));
 }
 
 
+
 // }
 
 //function that plays a round and returns a string for the winner based on match
 function playRound (computerSelection, playerSelection){
     //prompt that allows player input
-   
-
+    
 //  playerSelection = playerSelection.toLowerCase
     if( computerSelection === playerSelection ){
-    return('its a draw !') }
+        document.getElementById("result").textContent = `Computer Choice: ${computerSelection}`
+        document.getElementById("records").textContent = "Draw!" 
+    }
     
-    else if (computerSelection === "rock" && playerSelection === "scissors")
-    return('you lose, rock beats scissors!')
-    
-    else if (computerSelection === "scissors" && playerSelection === "rock")
-        return('you win, rock beats scissors!')
-    
-    else if (computerSelection === "paper" && playerSelection === "rock")
-        return('you lose, paper beats rock!')
-    
-    else if (computerSelection === "rock" && playerSelection === "paper")
-        return('you win, paper beats rock!')     
+    else if (computerSelection === "rock" && playerSelection === "scissors"){
+    document.getElementById("result").textContent = `Computer Choice: ${computerSelection}`
+    document.getElementById("records").textContent = "You Lose!"
+    }
+    else if (computerSelection === "scissors" && playerSelection === "rock"){
+    document.getElementById("result").textContent = `Computer Choice: ${computerSelection}`
+    document.getElementById("records").textContent = "You WIN!" 
+    }
 
-else if (computerSelection === "scissors" && playerSelection === "paper")
-    return('you lose, scissors beats paper!')
-
-else if ( computerSelection === "paper" && playerSelection === "scissors")
-    return('you win, scissors beats paper!') 
-
+    else if (computerSelection === "paper" && playerSelection === "rock"){
+    document.getElementById("result").textContent = `Computer Choice: ${computerSelection}`
+    document.getElementById("records").textContent = "You Lose!"
+    }
+    
+    else if (computerSelection === "rock" && playerSelection === "paper"){
+    document.getElementById("result").textContent = `Computer Choice: ${computerSelection}`
+    document.getElementById("records").textContent = "You WIN!"   
+    }
+else if (computerSelection === "scissors" && playerSelection === "paper"){
+    document.getElementById("result").textContent = `Computer Choice: ${computerSelection}`
+    document.getElementById("records").textContent = "You Lose!"
+}
+else if ( computerSelection === "paper" && playerSelection === "scissors"){
+    document.getElementById("result").textContent = `Computer Choice: ${computerSelection}`
+    document.getElementById("records").textContent = "You WIN!"
+}
   else {
       return("Invalid Enrty")
+      
   }
 }
 
