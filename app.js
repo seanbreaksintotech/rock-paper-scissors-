@@ -3,23 +3,33 @@ const select = ['rock', 'paper', 'scissors']
 
 
 //computer random selection from const select
-function computerPlay (){
-return select[Math.floor(Math.random()*select.length)]
+document.getElementById('rock').onclick = player
+document.getElementById('paper').onclick = player
+document.getElementById('scissors').onclick = player
+
+function player (){
+    let playerSelection = this.id;
+    console.log("Player: " + playerSelection)
+
+let computerSelection = select[Math.floor(Math.random()*select.length)]
+
+console.log("Computer: " + computerSelection);
+
+console.log(playRound(computerSelection, playerSelection));
 }
 
 
 // }
 
 //function that plays a round and returns a string for the winner based on match
-function playRound (){
+function playRound (computerSelection, playerSelection){
     //prompt that allows player input
-const playerSelection = prompt ('rock, paper, scissors?').toLowerCase();
-const computerSelection = computerPlay ();
-
+   
 
 //  playerSelection = playerSelection.toLowerCase
     if( computerSelection === playerSelection ){
     return('its a draw !') }
+    
     else if (computerSelection === "rock" && playerSelection === "scissors")
     return('you lose, rock beats scissors!')
     
@@ -44,12 +54,9 @@ else if ( computerSelection === "paper" && playerSelection === "scissors")
 }
 
 
+
 //5 round game that displays results to console 
-function game(){
-    console.log (playRound())
-    console.log (playRound())
-    console.log (playRound())
-    console.log (playRound())
-    console.log (playRound())
-}
-console.log (game())
+// function game(){
+//     console.log (playRound())
+// }
+// console.log (game())
